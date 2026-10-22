@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – Cloksy</title>
+<meta name="description" content="Privacy Policy for Cloksy, a local-first work hours tracker by Fireflies Labs.">
+<style>
+:root{
+  --bg:#fff; --surface:#f8f9fa; --text:#202124; --muted:#5f6368; --line:#dadce0;
+  --blue:#1a73e8; --blue-bg:#e8f0fe; --hover:#f1f3f4;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#202124; --surface:#2d2e31; --text:#e8eaed; --muted:#9aa0a6; --line:#3c4043;
+    --blue:#8ab4f8; --blue-bg:#2a3a55; --hover:#303134;}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:"Google Sans",Roboto,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:4px}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);height:64px;display:flex;align-items:center;padding:0 24px;gap:16px}
+.logo{width:32px;height:32px;border-radius:50%;background:var(--blue);display:grid;place-items:center;color:#fff}
+.top .name{font-size:22px;color:var(--muted)}
+.top .name b{color:var(--text);font-weight:500}
+.top .sp{flex:1}
+.top a.help{font-size:14px;font-weight:500;padding:8px 16px;border-radius:20px}
+.top a.help:hover{background:var(--hover);text-decoration:none}
+
+/* hero */
+.hero{background:var(--surface);border-bottom:1px solid var(--line)}
+.hero-in{max-width:1128px;margin:0 auto;padding:64px 24px 48px}
+.hero h1{font-size:clamp(34px,5vw,48px);font-weight:400;line-height:1.2;margin-bottom:16px}
+.hero p{font-size:18px;color:var(--muted);max-width:720px}
+.hero .meta{margin-top:24px;font-size:14px;color:var(--muted)}
+
+/* layout */
+.wrap{max-width:1128px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:240px minmax(0,1fr);gap:64px}
+nav.toc{position:sticky;top:88px;align-self:start;padding:32px 0;max-height:calc(100vh - 88px);overflow:auto}
+nav.toc h2{font-size:12px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin:0 0 12px 16px}
+nav.toc a{display:block;padding:9px 16px;font-size:14px;color:var(--muted);border-radius:0 20px 20px 0;border-left:3px solid transparent}
+nav.toc a:hover{background:var(--hover);text-decoration:none;color:var(--text)}
+nav.toc a.on{color:var(--blue);background:var(--blue-bg);border-left-color:var(--blue);font-weight:500}
+main{padding:32px 0 96px;max-width:760px}
+
+/* highlights */
+.highlights{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:56px}
+.hl{border:1px solid var(--line);border-radius:12px;padding:20px 20px 18px}
+.hl svg{color:var(--blue);margin-bottom:10px}
+.hl h3{font-size:16px;font-weight:500;margin-bottom:4px}
+.hl p{font-size:14px;color:var(--muted)}
+
+section{padding:40px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0;padding-top:8px}
+h2.t{font-size:28px;font-weight:400;line-height:1.3;margin-bottom:16px}
+section p{margin-bottom:16px;font-size:16px}
+section ul{margin:0 0 16px 24px}
+section li{margin-bottom:8px}
+.note{background:var(--surface);border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:16px 20px;margin:20px 0;font-size:15px}
+.note b{display:block;font-weight:500;margin-bottom:4px}
+
+table{width:100%;border-collapse:collapse;margin:8px 0 20px;font-size:15px}
+th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:500;color:var(--muted);font-size:13px}
+.scroll{overflow-x:auto}
+
+.contact{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;background:var(--blue-bg);border-radius:12px;padding:20px 24px}
+.btn{display:inline-block;background:var(--blue);color:#fff;padding:10px 24px;border-radius:20px;font-weight:500;font-size:14px}
+.btn:hover{text-decoration:none;opacity:.92}
+@media (prefers-color-scheme:dark){.btn{color:#202124}}
+
+footer{border-top:1px solid var(--line);background:var(--surface)}
+footer div{max-width:1128px;margin:0 auto;padding:24px;font-size:13px;color:var(--muted)}
+
+@media (max-width:900px){
+  .wrap{grid-template-columns:1fr;gap:0}
+  nav.toc{position:static;padding:16px 0 0;max-height:none;border-bottom:1px solid var(--line)}
+  nav.toc a{display:inline-block;border-left:0;border-radius:16px;padding:6px 14px;margin:0 4px 8px 0;border:1px solid var(--line)}
+  nav.toc a.on{border-color:var(--blue)}
+  nav.toc h2{margin-left:0}
+  .highlights{grid-template-columns:1fr}
+  .top{padding:0 16px}
+  .hero-in{padding:40px 16px 32px}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="name"><b>Cloksy</b> Privacy</div>
+  <div class="sp"></div>
+  <a class="help" href="mailto:fireflieslabs@gmail.com">Contact us</a>
+</header>
+
+<div class="hero">
+  <div class="hero-in">
+    <h1>Privacy Policy</h1>
+    <p>Cloksy keeps your work hours, notes and location on your phone. This page explains exactly what the app does with that information.</p>
+    <div class="meta">Effective October 2026 &nbsp;|&nbsp; Published by Fireflies Labs</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <a href="#intro">Introduction</a>
+    <a href="#storage">Data stays on your device</a>
+    <a href="#location">Location and geofencing</a>
+    <a href="#salary">Salary tracking</a>
+    <a href="#third">Third parties and analytics</a>
+    <a href="#control">Your control</a>
+    <a href="#law">Privacy laws</a>
+    <a href="#contact">Contact us</a>
+  </nav>
+
+  <main>
+    <div class="highlights">
+      <div class="hl">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+        <h3>Stored on your phone</h3>
+        <p>Punches, hours, notes and salary settings never leave your device.</p>
+      </div>
+      <div class="hl">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <h3>Location is optional</h3>
+        <p>Used only to detect your workplace boundary. Manual punching always works.</p>
+      </div>
+      <div class="hl">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>
+        <h3>No ads, no trackers</h3>
+        <p>No advertising or analytics SDKs, and we never sell your data.</p>
+      </div>
+      <div class="hl">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+        <h3>You are in control</h3>
+        <p>Export a PDF timesheet, delete records, or clear everything at any time.</p>
+      </div>
+    </div>
+
+    <section id="intro">
+      <h2 class="t">Introduction</h2>
+      <p>Fireflies Labs (“we”, “us”) develops Cloksy (“the app”). Your work routine, hours and location are your own business, so Cloksy is built to work without an account and without a server.</p>
+      <p>This policy describes the information the app handles and how it is protected.</p>
+    </section>
+
+    <section id="storage">
+      <h2 class="t">Data stays on your device</h2>
+      <p>Cloksy has no sign-up, username or password. The following information is stored only in a private database on your phone:</p>
+      <div class="scroll">
+      <table>
+        <tr><th>Information</th><th>Why the app keeps it</th></tr>
+        <tr><td>Punch-in and punch-out times</td><td>To calculate worked hours</td></tr>
+        <tr><td>Monthly targets, day statuses, notes</td><td>To show progress and your calendar</td></tr>
+        <tr><td>Work location coordinates and radius</td><td>To set up the optional geofence</td></tr>
+        <tr><td>Salary settings (optional)</td><td>To estimate earnings</td></tr>
+        <tr><td>Your name (optional)</td><td>To print on exported PDF reports</td></tr>
+      </table>
+      </div>
+      <p>We do not operate servers that hold your personal information. We do not collect, sell or share your time data with employers, advertisers or any other third party.</p>
+    </section>
+
+    <section id="location">
+      <h2 class="t">Location and geofencing</h2>
+      <p>If you turn on location-based punching, Cloksy asks for location permission, including background location (“Allow all the time”), so it can notice when you arrive at or leave a workplace you added.</p>
+      <div class="note">
+        <b>How background location is used</b>
+        Cloksy registers a virtual boundary (geofence) around your workplace using Google Play Services. Android then notifies Cloksy when your device crosses it, even if the app is closed, so Cloksy can prompt you or record your punch.
+      </div>
+      <ul>
+        <li>Cloksy does not record a history of where you go, and it does not track you outside your configured work areas.</li>
+        <li>Cloksy has no server and does not upload your coordinates.</li>
+        <li>The “use current location” button and address lookup use Android’s own location and geocoding services, which may contact Google’s services under Google’s privacy policy. Cloksy only fills the result into the form on your phone.</li>
+        <li>Location permission is optional. If you decline, you can still punch in and out manually.</li>
+      </ul>
+    </section>
+
+    <section id="salary">
+      <h2 class="t">Salary tracking</h2>
+      <p>Salary tracking is off by default. If you turn it on, the take-home pay and paid-leave count you enter are used only on your phone to estimate earnings.</p>
+      <div class="note">
+        <b>Estimates only</b>
+        Earnings shown in Cloksy are for personal planning. They are not payroll records, accounting, or legal advice.
+      </div>
+    </section>
+
+    <section id="third">
+      <h2 class="t">Third parties and analytics</h2>
+      <p>Cloksy contains no advertising SDKs, analytics frameworks, or trackers from ad networks, data brokers or social platforms. The only Google component involved is Google Play Services, which provides the geofencing and location features described above.</p>
+    </section>
+
+    <section id="control">
+      <h2 class="t">Your control</h2>
+      <ul>
+        <li><b>Export:</b> create a monthly A4 PDF timesheet whenever you like. It is shared only to the app you choose.</li>
+        <li><b>Edit or delete:</b> change or remove punch records and day statuses from the calendar.</li>
+        <li><b>Erase everything:</b> go to Settings → Apps → Cloksy → Storage → Clear data, or uninstall the app.</li>
+        <li><b>Withdraw location access:</b> change Cloksy’s location permission in Android Settings at any time.</li>
+      </ul>
+    </section>
+
+    <section id="law">
+      <h2 class="t">Privacy laws</h2>
+      <p>Because your information stays on your device and is not sent to us, Cloksy is designed to minimize data collection in line with principles found in the GDPR (European Union), LGPD (Brazil) and the DPDP Act (India). If you export a PDF and share it, that copy is under your control.</p>
+    </section>
+
+    <section id="contact">
+      <h2 class="t">Contact us</h2>
+      <p>Questions about this policy or Cloksy? Get in touch with Fireflies Labs.</p>
+      <div class="contact">
+        <div><b style="font-weight:500">Fireflies Labs</b><br><span style="color:var(--muted);font-size:14px">Developer of Cloksy</span></div>
+        <a class="btn" href="mailto:fireflieslabs@gmail.com">fireflieslabs@gmail.com</a>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer><div>© 2026 Fireflies Labs. Cloksy is an independent mobile application.</div></footer>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  function set(id){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id);});}
+  set('intro');
+  if(!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting)set(e.target.id);});
+  },{rootMargin:'-90px 0px -65% 0px'});
+  secs.forEach(function(s){if(s)io.observe(s);});
+})();
+</script>
+</body>
+</html>
